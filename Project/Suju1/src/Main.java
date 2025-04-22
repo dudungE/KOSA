@@ -7,7 +7,7 @@ public class Main {
         Product product1 = new Product("P001", "Keyboard", 30000);
         Product product2 = new Product("P002", "Mouse", 15000);
 
-        // 수주명세 생성
+        // 수주명세 생성 - 특별회원 시 추가 할인
         OrderDetail detail1 = new OrderDetail();
         detail1.registerOrderDetail(new OrderDetailInfo(2, 0.1, product1)); // 수량 2, 10% 할인
 
@@ -18,6 +18,10 @@ public class Main {
         List<OrderDetail> details = new ArrayList<>();
         details.add(detail1);
         details.add(detail2);
+        System.out.println("details");
+        for (OrderDetail od : details) {
+            System.out.println(od);
+        }
 
         OrderInfo orderInfo = new OrderInfo("ORD123", details);
 

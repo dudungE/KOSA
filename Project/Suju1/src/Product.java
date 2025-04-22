@@ -16,4 +16,13 @@ public class Product {
     public int getUnitPrice() {
         return unitPrice;
     }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "productCode='" + productCode + '\'' +
+                ", productName='" + productName + '\'' +
+                ", unitPrice=" + unitPrice +
+                '}';
+    }
 }

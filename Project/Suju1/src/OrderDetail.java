@@ -10,6 +10,15 @@ public class OrderDetail {
         System.out.println("Order detail registered for product: " + product.getProductName());
     }
 
+    @Override
+    public String toString() {
+        return "OrderDetail{" +
+                "quantity=" + quantity +
+                ", discountRate=" + discountRate +
+                ", product=" + product +
+                '}';
+    }
+
     // Getter for product (optional)
     public Product getProduct() {
         return product;
