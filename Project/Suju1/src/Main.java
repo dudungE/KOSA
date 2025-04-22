@@ -3,7 +3,8 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        // 상품 생성
+        // 상품 생성 - 아이템 종류 정하기 - 인벤토리 수 확인
+        // 다형성 이용해서 아이템 넣기
         Product product1 = new Product("P001", "Keyboard", 30000);
         Product product2 = new Product("P002", "Mouse", 15000);
 

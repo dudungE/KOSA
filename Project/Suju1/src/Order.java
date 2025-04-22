@@ -14,6 +14,11 @@ public class Order {
         System.out.println("Order registered: " + orderNumber +
                 "Order Date:" + orderDate);
     }
+
+    public Date getOrderDate() {
+        return this.orderDate;
+    }
+
     @Override
     public String toString() {
         return "Order{" +
@@ -23,7 +28,5 @@ public class Order {
                 '}';
     }
 
-    public Date getOrderDate() {
-        return this.orderDate;
-    }
+
 }
