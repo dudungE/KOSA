@@ -6,6 +6,8 @@ public class AccountDAO {
 
     // 기능 1
 
+    // 기능 2
+
     public void createAccount(Account acc) throws Exception {
         String sql = "INSERT INTO account VALUES (?, ?, ?)";
         try (Connection conn = DBUtil.getConnection();
