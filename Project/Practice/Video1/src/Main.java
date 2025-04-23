@@ -21,8 +21,8 @@ public class Main {
                     String cat = sc.nextLine();
                     vm.Create(title, cat);}
                 case 2 -> {vm.Read();}
-                case 3 -> {}
-                case 4 -> {}
+                case 3 -> {vm.Update();}
+                case 4 -> {vm.Delete();}
 
             }
         }
