@@ -4,6 +4,8 @@ import java.util.*;
 
 public class AccountDAO {
 
+    // 기능 1
+
     public void createAccount(Account acc) throws Exception {
         String sql = "INSERT INTO account VALUES (?, ?, ?)";
         try (Connection conn = DBUtil.getConnection();
