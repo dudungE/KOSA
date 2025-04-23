@@ -1,7 +1,16 @@
+import java.util.Scanner;
+
 public class Person {
     private String name;
     private String PhoneNum;
     private String address;
+
+
+    public Person(String name, String PhoneNum, String address) {
+        this.name = name;
+        this.PhoneNum = PhoneNum;
+        this.address = address;
+    }
 
     public String getName() {
         return name;
@@ -29,10 +38,9 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
+        return
                 "name='" + name + '\'' +
                 ", PhoneNum='" + PhoneNum + '\'' +
-                ", address='" + address + '\'' +
-                '}';
+                ", address='" + address + '\'';
     }
 }
