@@ -3,6 +3,12 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+
+        // 회원정보 입력(id, 이름, 주소, 번호, 특별회원여부)
+        // 상품 주문 목록 입력
+        // 창고 조회
+        //
+
         // 상품 생성 - 아이템 종류 정하기 - 인벤토리 수 확인
         // 다형성 이용해서 아이템 넣기
         Product product1 = new Product("P001", "Keyboard", 30000);
