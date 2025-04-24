@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;ex01.instance_static.StaticMethod&apos; to &apos;StaticClass&apos;&#x0D;&#x0A;- Original project: &apos;day08_oop&apos;&#x0D;&#x0A;- Original element: &apos;ex01.instance_static.StaticMethod&apos;&#x0D;&#x0A;- Renamed element: &apos;ex01.instance_static.StaticClass&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;StaticMethod&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;ex01.instance_static{StaticMethod.java[StaticMethod" matchStrategy="1" name="StaticClass" qualified="false" references="true" similarDeclarations="false" stamp="1743128422019" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,14 @@
+package ex03.thread;
+
+import javax.swing.JFrame;
+
+public class GraphicThread 
+						extends JFrame implements Runnable {
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

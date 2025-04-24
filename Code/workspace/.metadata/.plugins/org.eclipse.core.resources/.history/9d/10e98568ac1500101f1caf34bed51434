@@ -1,0 +1,8 @@
+package ex05.syncronized;
+
+public class SimpleThread {
+	
+	public static void main(String[] args) {
+		
+	}
+}

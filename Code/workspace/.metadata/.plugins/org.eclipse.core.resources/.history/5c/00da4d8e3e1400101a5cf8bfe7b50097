@@ -1,0 +1,9 @@
+package quiz3;
+
+public class MainEntry {
+	public static void main(String[] args) {
+		int NULL = 33;
+		
+		System.out.println(NULL);
+	}
+}

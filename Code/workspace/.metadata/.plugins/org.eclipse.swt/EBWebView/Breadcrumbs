@@ -1,0 +1,193 @@
+0:07:41 Tab1 RenderProcessGone
+0:07:41 Browser1 Close Tab1 at 0
+0:07:41 Tab1 WebContentsDestroyed
+0:07:41 Microsoft.Shutdown.OnWindowClosing
+0:07:41 Microsoft.Shutdown.OnWindowClosingPostClearBrowsingData_NoBrowsingDataCleared
+0:07:41 Widget Closed: BrowserFrame
+0:07:41 Microsoft.Shutdown.OnWindowClosing
+0:07:41 Microsoft.Shutdown.OnWindowClosingPostClearBrowsingData_NoBrowsingDataCleared
+0:07:41 Microsoft.Last_Browser_Removed
+0:07:41 Microsoft.NewBrowser_Popup
+0:07:41 Microsoft.BrowserList.AddBrowser
+0:07:41 Browser4 Insert active Tab4 at 0
+0:07:41 Tab4 StartNav33 #auto_toplevel
+0:07:41 Tab4 StartNav34 #typed
+0:07:41 Tab4 FinishNav33
+0:07:41 Tab4 PageLoad
+0:07:41 Tab4 FinishNav34
+0:07:41 Tab4 PageLoad
+0:07:42 Microsoft.NewBrowser_Popup
+0:07:42 Microsoft.BrowserList.AddBrowser
+0:07:42 Browser5 Insert active Tab5 at 0
+0:07:42 Tab5 StartNav35 #auto_toplevel
+0:07:42 Tab5 StartNav36 #typed
+0:07:42 Tab5 FinishNav35
+0:07:42 Tab5 PageLoad
+0:07:42 Tab5 FinishNav36
+0:07:42 Tab5 PageLoad
+0:07:42 Tab4 StartNav37 #typed
+0:07:42 Tab4 FinishNav37
+0:07:42 Tab4 PageLoad
+0:07:46 Widget Closed: TooltipAura
+0:07:48 Tab5 StartNav38 #typed
+0:07:48 Tab5 FinishNav38
+0:07:48 Tab5 PageLoad
+0:08:48 Tab4 StartNav39 #typed
+0:08:48 Tab4 FinishNav39
+0:08:48 Tab4 PageLoad
+0:09:14 Tab4 StartNav40 #typed
+0:09:14 Tab4 FinishNav40
+0:09:14 Tab4 PageLoad
+0:09:25 Tab4 StartNav41 #typed
+0:09:25 Tab4 FinishNav41
+0:09:25 Tab4 PageLoad
+0:09:33 Tab4 StartNav42 #typed
+0:09:33 Tab4 FinishNav42
+0:09:33 Tab4 PageLoad
+0:09:35 Tab4 StartNav43 #typed
+0:09:35 Tab4 FinishNav43
+0:09:35 Tab4 PageLoad
+0:09:37 Tab4 StartNav44 #typed
+0:09:37 Tab4 FinishNav44
+0:09:37 Tab4 PageLoad
+0:09:39 Tab4 StartNav45 #typed
+0:09:39 Tab4 FinishNav45
+0:09:39 Tab4 PageLoad
+0:10:02 Tab4 StartNav46 #typed
+0:10:02 Tab4 FinishNav46
+0:10:02 Tab4 PageLoad
+0:10:33 Tab4 StartNav47 #typed
+0:10:33 Tab4 FinishNav47
+0:10:33 Tab4 PageLoad
+0:10:35 Tab4 StartNav48 #typed
+0:10:35 Tab4 FinishNav48
+0:10:35 Tab4 PageLoad
+0:10:36 Tab4 StartNav49 #typed
+0:10:36 Tab4 FinishNav49
+0:10:36 Tab4 PageLoad
+0:10:42 Tab4 StartNav50 #typed
+0:10:42 Tab4 FinishNav50
+0:10:42 Tab4 PageLoad
+0:10:58 Tab4 StartNav51 #typed
+0:10:58 Tab4 FinishNav51
+0:10:58 Tab4 PageLoad
+0:11:04 Tab4 StartNav52 #typed
+0:11:04 Tab4 FinishNav52
+0:11:04 Tab4 PageLoad
+0:11:07 Tab4 StartNav53 #typed
+0:11:07 Tab4 FinishNav53
+0:11:07 Tab4 PageLoad
+0:11:08 Tab4 StartNav54 #typed
+0:11:08 Tab4 FinishNav54
+0:11:08 Tab4 PageLoad
+0:11:10 Tab4 StartNav55 #typed
+0:11:10 Tab4 FinishNav55
+0:11:10 Tab4 PageLoad
+0:11:15 Tab4 StartNav56 #typed
+0:11:15 Tab4 FinishNav56
+0:11:15 Tab4 PageLoad
+0:11:56 Tab4 StartNav57 #typed
+0:11:56 Tab4 FinishNav57
+0:11:56 Tab4 PageLoad
+0:12:03 Tab4 StartNav58 #typed
+0:12:03 Tab4 FinishNav58
+0:12:03 Tab4 PageLoad
+0:12:17 Tab4 StartNav59 #typed
+0:12:17 Tab4 FinishNav59
+0:12:17 Tab4 PageLoad
+0:12:20 Tab4 StartNav60 #typed
+0:12:20 Tab4 FinishNav60
+0:12:20 Tab4 PageLoad
+0:12:27 Tab4 StartNav61 #typed
+0:12:27 Tab4 FinishNav61
+0:12:27 Tab4 PageLoad
+0:12:35 Tab4 StartNav62 #typed
+0:12:35 Tab4 FinishNav62
+0:12:35 Tab4 PageLoad
+0:12:50 Tab4 StartNav63 #typed
+0:12:50 Tab4 FinishNav63
+0:12:50 Tab4 PageLoad
+0:13:01 Tab4 StartNav64 #typed
+0:13:01 Tab4 FinishNav64
+0:13:01 Tab4 PageLoad
+0:13:26 Tab4 StartNav65 #typed
+0:13:26 Tab4 FinishNav65
+0:13:26 Tab4 PageLoad
+0:13:28 Tab4 StartNav66 #typed
+0:13:28 Tab4 FinishNav66
+0:13:28 Tab4 PageLoad
+0:13:30 Tab4 StartNav67 #typed
+0:13:30 Tab4 FinishNav67
+0:13:30 Tab4 PageLoad
+0:13:31 Tab4 StartNav68 #typed
+0:13:31 Tab4 FinishNav68
+0:13:31 Tab4 PageLoad
+0:13:42 Tab4 StartNav69 #typed
+0:13:42 Tab4 FinishNav69
+0:13:42 Tab4 PageLoad
+0:13:44 Tab4 StartNav70 #typed
+0:13:44 Tab4 FinishNav70
+0:13:44 Tab4 PageLoad
+0:13:51 Tab4 StartNav71 #typed
+0:13:51 Tab4 FinishNav71
+0:13:51 Tab4 PageLoad
+0:13:53 Tab4 StartNav72 #typed
+0:13:53 Tab4 FinishNav72
+0:13:53 Tab4 PageLoad
+0:14:00 Tab4 StartNav73 #typed
+0:14:00 Tab4 FinishNav73
+0:14:00 Tab4 PageLoad
+0:14:11 Tab4 StartNav74 #typed
+0:14:11 Tab4 FinishNav74
+0:14:11 Tab4 PageLoad
+0:14:30 Tab4 StartNav75 #typed
+0:14:30 Tab4 FinishNav75
+0:14:30 Tab4 PageLoad
+0:14:32 Tab4 StartNav76 #typed
+0:14:32 Tab4 FinishNav76
+0:14:32 Tab4 PageLoad
+0:14:52 Tab4 StartNav77 #typed
+0:14:52 Tab4 FinishNav77
+0:14:52 Tab4 PageLoad
+0:14:53 Tab4 StartNav78 #typed
+0:14:53 Tab4 FinishNav78
+0:14:53 Tab4 PageLoad
+0:14:55 Tab4 StartNav79 #typed
+0:14:55 Tab4 FinishNav79
+0:14:55 Tab4 PageLoad
+0:14:56 Tab4 StartNav80 #typed
+0:14:56 Tab4 FinishNav80
+0:14:56 Tab4 PageLoad
+0:15:41 Tab4 StartNav81 #typed
+0:15:41 Tab4 FinishNav81
+0:15:41 Tab4 PageLoad
+0:16:04 Tab4 StartNav82 #typed
+0:16:04 Tab4 FinishNav82
+0:16:04 Tab4 PageLoad
+0:16:09 Tab4 StartNav83 #typed
+0:16:09 Tab4 FinishNav83
+0:16:09 Tab4 PageLoad
+0:16:31 Tab4 StartNav84 #typed
+0:16:31 Tab4 FinishNav84
+0:16:31 Tab4 PageLoad
+0:17:13 Tab4 StartNav85 #typed
+0:17:13 Tab4 FinishNav85
+0:17:13 Tab4 PageLoad
+0:17:34 Tab4 StartNav86 #typed
+0:17:34 Tab4 FinishNav86
+0:17:34 Tab4 PageLoad
+0:22:17 Tab4 StartNav87 #typed
+0:22:17 Tab4 FinishNav87
+0:22:17 Tab4 PageLoad
+0:22:19 Tab4 StartNav88 #typed
+0:22:19 Tab4 FinishNav88
+0:22:19 Tab4 PageLoad
+0:22:25 Tab4 StartNav89 #typed
+0:22:25 Tab4 FinishNav89
+0:22:25 Tab4 PageLoad
+0:22:25 Tab4 StartNav90 #typed
+0:22:26 Tab4 FinishNav90
+0:22:26 Tab4 PageLoad
+0:22:40 Tab4 StartNav91 #typed
+0:22:40 Tab4 FinishNav91
+0:22:40 Tab4 PageLoad

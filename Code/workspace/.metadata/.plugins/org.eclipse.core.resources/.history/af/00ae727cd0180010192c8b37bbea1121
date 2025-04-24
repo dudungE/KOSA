@@ -1,0 +1,49 @@
+package ex06.network.chat;
+
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.Collections;
+import java.util.HashMap;
+
+public class TcpMultiChatServer {  // outer class
+	
+	HashMap clients; // key, value
+	
+	public TcpMultiChatServer() {  //생성자함수 - 멤버변수 초기화담당
+		clients = new HashMap();
+		Collections.synchronizedMap(clients);  // 동기화
+	}
+	
+	public void start() {  // user method
+		ServerSocket ss = null;  // server socket 1
+		Socket s = null;  // client socket 2
+		
+		try {
+			ss = new ServerSocket(7777);
+			System.out.println("서버 시작 되었습니다. 쳇 시작 합시다!!!");
+			while(true) {
+				s = ss.accept(); 
+				System.out.println("["+s.getInetAddress()+":"+s.getPort()+"] 에서 접속하셨습니다.");
+				ServerReceiver thread = new ServerReceiver(s);
+			} // end while
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+	} // end start()
+	
+	class ServerReceiver extends Thread {
+
+		@Override
+		public void run() {
+			
+		} // end run()
+		
+	} // end ServerReceiver class
+	
+	
+	public static void main(String[] args) {
+		
+	}
+}

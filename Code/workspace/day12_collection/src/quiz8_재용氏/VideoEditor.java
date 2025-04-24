@@ -1,0 +1,50 @@
+package quiz8_재용氏;
+
+public class VideoEditor {
+    private int id;
+    private String title;
+    private String category;
+
+    private VideoEditor(VideoEditorBuilder builder) {
+        this.id = builder.id;
+        this.title = builder.title;
+        this.category = builder.category;
+    }
+
+    public static class VideoEditorBuilder {
+        private int id;
+        private String title;
+        private String category;
+
+        public VideoEditorBuilder id (int id) {
+            this.id = id;
+            return this;
+        }
+
+        public VideoEditorBuilder title (String title) {
+            this.title = title;
+            return this;
+        }
+
+        public VideoEditorBuilder category (String category) {
+            this.category = category;
+            return this;
+        }
+
+        public VideoEditor build() {
+            return new VideoEditor(this);
+        }
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+}

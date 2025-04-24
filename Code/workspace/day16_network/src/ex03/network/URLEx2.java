@@ -1,0 +1,44 @@
+package ex03.network;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+public class URLEx2 {
+	public static void main(String[] args) 
+						throws MalformedURLException  {  //
+		
+//		URL url = new URL("https://www.google.com/search?q=kim+yuna&sca_esv=563a49081b992b59&hl=ko&source=hp&ei=gob4Z9vhEM69vr0P5YCI4Ac&iflsig=ACkRmUkAAAAAZ_iUkhOEU1p2wunj3Rr90901BZxlQGCg&gs_ssp=eJzj4tTP1TdIyk6uMjFg9OLIzsxVqCzNSwQARKoGjg&oq=kim+yun&gs_lp=Egdnd3Mtd2l6IgdraW0geXVuKgIIADIFEC4YgAQyCxAuGIAEGMcBGK8BMgUQLhiABDIHEC4YgAQYCjIHEC4YgAQYCjIHEC4YgAQYCjIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgARIzjRQlQdYxydwBHgAkAEAmAGFAaABrgmqAQQwLjEwuAEByAEA-AEBmAIOoAL3CagCCsICHRAAGIAEGLQCGNQDGOUCGNUDGLcDGIoFGOoCGIoDwgIaEAAYgAQYtAIY1AMY5QIYtwMYigUY6gIYigPCAg4QLhiABBixAxiDARjUAsICCBAuGIAEGNQCwgIEEAAYA8ICCxAAGIAEGLEDGIMBwgIREC4YgAQYsQMY0QMYgwEYxwHCAggQABiABBixA8ICERAuGIAEGLEDGIMBGMcBGK8BwgIOEC4YgAQYsQMYxwEYrwHCAggQLhiABBixA8ICCxAuGIAEGLEDGIMBwgITEC4YgAQYsQMYgwEY1AIYRhj9AcICChAuGIAEGEMYigXCAgQQLhgDwgIHEAAYgAQYCpgDBvEF_5jkaBBlDOCSBwQ0LjEwoAegsQGyBwQwLjEwuAfqCQ&sclient=gws-wiz");  //
+//		URL url = new URL("http://localhost:8080/");
+		URL url = new URL("https://search.daum.net/search?w=tot&DA=YZR&t__nil_searchbox=btn&q=kim+yuna");
+		
+		
+//		https://www.google.com
+//		/search?
+//		q=kim+yuna  // 속성=값&속성=값2&속성=값3,....
+//		&sca_esv=563a49081b992b59
+//		&hl=ko
+//		&source=hp
+//		&ei=gob4Z9vhEM69vr0P5YCI4Ac&iflsig=ACkRmUkAAAAAZ_iUkhOEU1p2wunj3Rr90901BZxlQGCg
+//		&gs_ssp=eJzj4tTP1TdIyk6uMjFg9OLIzsxVqCzNSwQARKoGjg&oq=kim+yun&gs_lp=Egdnd3Mtd2l6IgdraW0geXVuKgIIADIFEC4YgAQyCxAuGIAEGMcBGK8BMgUQLhiABDIHEC4YgAQYCjIHEC4YgAQYCjIHEC4YgAQYCjIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgARIzjRQlQdYxydwBHgAkAEAmAGFAaABrgmqAQQwLjEwuAEByAEA-AEBmAIOoAL3CagCCsICHRAAGIAEGLQCGNQDGOUCGNUDGLcDGIoFGOoCGIoDwgIaEAAYgAQYtAIY1AMY5QIYtwMYigUY6gIYigPCAg4QLhiABBixAxiDARjUAsICCBAuGIAEGNQCwgIEEAAYA8ICCxAAGIAEGLEDGIMBwgIREC4YgAQYsQMY0QMYgwEYxwHCAggQABiABBixA8ICERAuGIAEGLEDGIMBGMcBGK8BwgIOEC4YgAQYsQMYxwEYrwHCAggQLhiABBixA8ICCxAuGIAEGLEDGIMBwgITEC4YgAQYsQMYgwEY1AIYRhj9AcICChAuGIAEGEMYigXCAgQQLhgDwgIHEAAYgAQYCpgDBvEF_5jkaBBlDOCSBwQ0LjEwoAegsQGyBwQwLjEwuAfqCQ&sclient=gws-wiz
+		
+		//URL 이 갖고 있는 함수들 사용
+		System.out.println("프로토콜 : "+ url.getProtocol());
+		System.out.println("호스트와 포트 : "+ url.getAuthority());
+		System.out.println("호스트 : "+ url.getHost());
+		System.out.println("포트 : "+ url.getPort());
+		System.out.println("경로 : "+ url.getPath());
+		System.out.println("질의 : "+ url.getQuery());
+		System.out.println("파일명 : "+ url.getFile());
+		System.out.println("참조 : "+ url.getRef());
+		
+		
+		
+	}
+}
+
+
+
+
+
+
+

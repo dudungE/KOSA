@@ -1,0 +1,32 @@
+//*
+package ex06.whileDoWhile;
+
+public class MainEntry {
+	public static void main(String[] args) {
+		
+		int a = 1; // 반드시 변수 초기화
+		
+		while( a <= 3 ) {
+			System.out.print(a + "\t");
+			a++; // 증감식
+		}
+	}
+}
+//*/
+
+
+/*
+package ex06.whileDoWhile;
+
+public class MainEntry {
+	public static void main(String[] args) {
+		
+		int a = 1; // 반드시 변수 초기화
+		
+		while( a <= 3 ) {
+			System.out.print(a + "\t");
+			a++; // 증감식
+		}
+	}
+}
+//*/

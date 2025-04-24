@@ -1,0 +1,23 @@
+package ex06.network.chat;
+
+import java.net.Socket;
+
+public class TcpMultiChatClient {
+	
+	public static void main(String[] args) {
+		if( args.length != 1 ) {
+			System.out.println("USAGE : java TcpMultiChatClient nickName ? ");
+			System.exit(0);
+		}
+		try {
+			String ip = "192.168.230.178";  // "127.0.0.1" or localhost
+			Socket s = new Socket(ip, 7777);
+			System.out.println("서버에 연결 되었습니다.");
+			
+			Thread sender = new Thread(new ClientSender(s, args[0]));
+			Thread reciever = new Thread(new ClientReceiver(s));
+			
+			sender.start();			reciever.start();  // run() 메소드 유도
+		} catch (Exception e) {		e.printStackTrace();		}
+	} // end main
+}

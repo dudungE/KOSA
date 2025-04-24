@@ -1,0 +1,200 @@
+package quiz.bmi_동규氏;
+
+import java.io.BufferedReader;
+import java.io.EOFException;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class PersonManager {
+	ArrayList<Person> persons = new ArrayList<Person>();
+	Scanner sc = new Scanner(System.in);
+	
+	//추가 (메뉴 1번)
+	public void addPerson() {
+		persons.add(inputPerson());
+		int size = persons.size() - 1;
+		System.out.println();
+		System.out.printf("[%s 님의 건강상태 %s 이십니다!]\n", persons.get(size).getName(), persons.get(size).getHealth());
+		System.out.println();
+	}
+	
+	//삭제 (메뉴 2번)
+	public void deletePerson() {
+		printList();
+		if(persons.size() == 0) {
+			System.out.println("현재 등록된 대상이 없습니다.");
+			return;
+		}
+		Person person = inputPerson();
+		int idx = findIDX(person);
+		
+		if(idx == -1) {
+			System.out.println("대상이 존재하지 않습니다.");
+			return;
+		}
+		
+		persons.remove(idx);
+		System.out.println("삭제가 완료되었습니다.");	
+	}
+	
+	//수정 (메뉴 3번)
+	public void updatePerson() {
+		boolean check = false;
+		printList();
+		if(persons.size() == 0) {
+			System.out.println("현재 등록된 대상이 없습니다.");
+			return;
+		}
+		Person person = inputPerson();
+		int idx = findIDX(person);	
+		if(idx == -1) {
+			System.out.println("대상이 존재하지 않습니다.");
+			return;
+		}
+		person = persons.get(idx);
+		System.out.println();
+		
+		while(!check) {
+			System.out.println("수정할 항목을 선택하세요. (1.키   2.몸무게)");
+			switch (sc.nextLine()) {
+			case "1":
+				System.out.print("수정할 키를 입력하세요 > ");
+				person.setHeight(Integer.parseInt(sc.nextLine()));
+				check = true;
+				break;
+			case "2":
+				System.out.print("수정할 몸무게를 입력하세요 > ");
+				person.setWeight(Integer.parseInt(sc.nextLine()));
+				check = true;
+				break;
+			default:
+				System.out.println("1 or 2 번호만 입력해주세요");
+				break;
+			}
+		}
+		person.setBmi(person.getBmi(person.isGender(), person.getHeight(), person.getWeight()));
+		person.setHealth();
+		
+		System.out.println("수정이 완료되었습니다.");
+		System.out.println();
+		System.out.printf("[%s 님의 건강상태 %s 이십니다!]\n", persons.get(idx).getName(), persons.get(idx).getHealth());
+		System.out.println();
+	}
+	
+	//출력 (메뉴 4번)
+	public void printList() {
+		System.out.println();
+		System.out.println("------------------------ 고객 명단 출력 -------------------------");
+		if(persons.size() == 0) {
+			System.out.println("현재 등록된 대상이 없습니다.");
+			return;
+		}
+		for(Person person : persons) {
+			System.out.println(person);
+		}
+		System.out.println("------------------------ 고객 명단 끝 --------------------------");
+		System.out.println();
+	}
+	
+	//저장(파일) (메뉴 5번)
+	public void saveFile() {
+		if(persons.size() == 0) {
+			System.out.println("현재 등록된 대상이 없습니다.");
+			return;
+		}
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		ObjectOutputStream oos = null;
+		File f = new File("Person.txt");
+		FileOutputStream fos = null;
+		try {
+			fos = new FileOutputStream(f, false); // append mode
+			oos = new ObjectOutputStream(fos);
+			
+			for(Person person : persons) {
+				String gender;
+				if(person.isGender()) gender = "남자";
+				else gender = "여자";
+				String str = String.format("이름 : %1s   성별 : %1s   키 : %1d   몸무게 : %1d   BMI : %1.1f\n", 
+						person.getName(), gender, person.getHeight(), person.getWeight(), person.getBmi());
+				oos.writeObject(str);
+			}
+			System.out.println("파일 저장 완료!!(아마도)");
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {oos.close();fos.close();} catch (IOException e) {e.printStackTrace();}
+		} // try end
+	}
+	
+	//출력(파일) (메뉴 6번)
+		public void loadFile() throws Exception {
+			
+			File f = new File("Person.txt");
+			FileInputStream fis = null;
+			ObjectInputStream bis = null;
+			
+			try {
+				fis = new FileInputStream(f);
+				bis = new ObjectInputStream(fis);
+
+				while (true) { //하나의 파일이 끝나면 다른 파일로 간주해야함. 포인터 변경됨
+					String str = (String) bis.readObject();
+					System.out.println(str);
+				}
+			} catch (EOFException e) {
+				System.out.println("로드 완료!");
+			} finally {
+				bis.close();
+			} // try end
+		}
+		
+	//리스트 내 입력받은 객체의 인덱스를 반환하는 메소드 (못찾으면 -1 반환)
+	public int findIDX(Person person) {
+		int idx = -1;	
+		for (int i = 0; i < persons.size(); i++) {
+			Person tmp = persons.get(i);
+			if(person.getName().equals(tmp.getName()) && person.getHeight() == tmp.getHeight()) {
+				idx = i;
+				return idx;
+			} 
+		}	
+		return idx;
+	}
+	
+	
+	//정보 입력받아 객체 반환 (1번에서 사용)
+	public Person inputPerson() {
+		boolean gender = true;
+		boolean check = true;
+		
+		System.out.print("이름을 입력하세요 > ");
+		String name = sc.nextLine();
+		
+		while(check) {
+			System.out.print("성별을 입력하세요.(남,여) > ");
+			String str = sc.nextLine();
+			
+			if(str.equals("남")) {
+				gender = true; check = false;
+			} else if(str.equals("여")) {
+				gender = false; check = false;
+			} else {
+				System.out.println("잘못된 입력입니다.");
+			}
+		}
+
+		System.out.print("키를 입력하세요 > ");
+		int height = Integer.parseInt(sc.nextLine());
+		System.out.print("몸무게를 입력하세요 > ");
+		int weight = Integer.parseInt(sc.nextLine());
+		
+		return new Person(name, gender, height, weight);
+	}
+}

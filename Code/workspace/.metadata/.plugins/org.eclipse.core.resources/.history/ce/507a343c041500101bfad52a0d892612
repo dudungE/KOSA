@@ -1,0 +1,9 @@
+package ex02.runnable;
+
+public class MainEntry {
+	public static void main(String[] args) {
+		UserRunnable u1 = new UserRunnable("u1");
+		Thread t1 = new Thread(u1);
+		t1.start();
+	}
+}

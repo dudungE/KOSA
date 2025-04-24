@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=day09_inheritance/src&lt;ex06.inheritance{Shape.java[Shape" modifiers="1" timestamp="1743401816442"/>
+    <typeInfo handle="=day10_abstract_interface/src&lt;ex02.Abstract{Shape.java[Shape" modifiers="1025" timestamp="1743474333169"/>
+    <typeInfo handle="=day10_abstract_interface/C:\/Users\/KOSA\/.p2\/pool\/plugins\/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.6.v20250130-0529\/jre\/lib\/jrt-fs.jar`java.base=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/21\/docs\/api\/=/=/module=/true=/&lt;java.util.concurrent(CompletableFuture$AsynchronousCompletionTask.class[AsynchronousCompletionTask" modifiers="1545" timestamp="1738182954000"/>
+    <typeInfo handle="=day10_abstract_interface/C:\/Users\/KOSA\/.p2\/pool\/plugins\/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.6.v20250130-0529\/jre\/lib\/jrt-fs.jar`java.sql=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/21\/docs\/api\/=/=/module=/true=/&lt;java.sql(Array.class[Array" modifiers="1537" timestamp="1738182954000"/>
+    <typeInfo handle="=day10_abstract_interface/C:\/Users\/KOSA\/.p2\/pool\/plugins\/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.6.v20250130-0529\/jre\/lib\/jrt-fs.jar`java.base=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/21\/docs\/api\/=/=/module=/true=/&lt;java.lang.foreign(Arena.class[Arena" modifiers="1537" timestamp="1738182954000"/>
+    <typeInfo handle="=day10_abstract_interface/C:\/Users\/KOSA\/.p2\/pool\/plugins\/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.6.v20250130-0529\/jre\/lib\/jrt-fs.jar`java.base=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/21\/docs\/api\/=/=/module=/true=/&lt;java.util.zip(ZipConstants.class[ZipConstants" modifiers="1536" timestamp="1738182954000"/>
+    <typeInfo handle="=day10_abstract_interface/src&lt;ex03.Abstract{Shape.java[Shape" modifiers="1025" timestamp="1743475529527"/>
+    <typeInfo handle="=day10_abstract_interface/src&lt;ex06.multiImplements{Test.java[Test" modifiers="513" timestamp="1743492904964"/>
+    <typeInfo handle="=day10_abstract_interface/src&lt;ex05.Interface{IDraw.java[IDraw" modifiers="513" timestamp="1743492388542"/>
+    <typeInfo handle="=day13_IO/C:\/Users\/KOSA\/.p2\/pool\/plugins\/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.6.v20250130-0529\/jre\/lib\/jrt-fs.jar`java.base=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/21\/docs\/api\/=/=/module=/true=/&lt;java.util(Comparator.class[Comparator" modifiers="1537" timestamp="1738182954000"/>
+</typeInfoHistroy>

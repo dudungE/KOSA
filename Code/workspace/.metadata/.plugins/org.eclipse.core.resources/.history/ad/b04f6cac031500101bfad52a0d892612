@@ -1,0 +1,11 @@
+package ex02.runnable;
+
+public class UserRunnable implements Runnable {
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

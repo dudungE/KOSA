@@ -1,0 +1,36 @@
+package ex02.jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class GiftInsert {
+	public static void main(String[] args) 
+				throws ClassNotFoundException, SQLException {  //예외처리 위임
+		
+		Class.forName("oracle.jdbc.OracleDriver");
+		Connection conn = DriverManager.getConnection(
+				"jdbc:oracle:thin:@127.0.0.1:1521:xe", 
+				"kingsmile", "oracle");
+		
+		//3. 사용 (DML 명령어 - Insert )  - Statement  / PreparedStatement
+		Statement stmt = conn.createStatement();
+		
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

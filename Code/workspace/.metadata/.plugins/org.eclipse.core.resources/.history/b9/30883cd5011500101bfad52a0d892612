@@ -1,0 +1,17 @@
+package ex01.thread;
+
+public class UserThread extends Thread {
+	
+	String name;
+	
+	public UserThread(String name) {
+		this.name = name;
+	}
+
+	@Override
+	public void run() {
+		System.out.println("run() call~~~");
+	}
+
+	
+}

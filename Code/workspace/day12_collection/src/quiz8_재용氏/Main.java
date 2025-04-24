@@ -1,0 +1,118 @@
+package quiz8_재용氏;
+
+import java.util.Map;
+import java.util.HashMap;
+import java.util.Scanner;
+import java.time.LocalDateTime;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Map<Integer, Video> map = new HashMap<>();
+        boolean flag = true;
+
+        while (flag){
+            System.out.printf(" 1 : 추가\n 2 : 삭제\n 3 : 저장한 비디오들 출력\n 4 : 수정\n 5 : 빌리기\n 6 : 종료\n");
+            System.out.print("값 입력하기 :  ");
+            int n = scanner.nextInt();
+            switch (n) {
+                case 1:
+                    System.out.print("저장할 위치 (숫자) : ");
+                    int index = scanner.nextInt();
+                    while (map.containsKey(index)) {
+                        System.out.print("이 위치에 이미 영화가 저장 되어있습니다. 다른 번호를 입력하세요 : ");
+                        index = scanner.nextInt();
+                    }
+                    System.out.print("비디오 ID : ");
+                    int id = scanner.nextInt();
+                    System.out.print("비디오 이름 : ");
+                    String title = scanner.next();
+                    System.out.print("비디오 카테고리 : ");
+                    String category = scanner.next();
+
+                    map.put(index, new Video(id, title, category));
+                    break;
+                case 2:
+                    System.out.print("삭제할 비디오의 위치 : ");
+                    int index_delete = scanner.nextInt();
+                    if (!map.containsKey(index_delete)) {
+                        System.out.println("이 위치에는 비디오가 없습니다.");
+                        break;
+                    }
+                    map.remove(index_delete);
+                    break;
+                case 3:
+                    for (Map.Entry<Integer, Video> entry : map.entrySet()) {
+                        System.out.println(entry.getKey() + " : " + map.get(entry.getKey()).getTitle());
+                    }
+                    break;
+                case 4:
+                    System.out.print("수정하고 싶은 비디오의 위치 : ");
+                    int index_edit = scanner.nextInt();
+                    scanner.nextLine();
+                    if (!map.containsKey(index_edit)) {
+                        System.out.println("이 위치에는 비디오가 없습니다.");
+                        break;
+                    }
+                    Video videoToEdit = map.get(index_edit);
+                    System.out.print("ID를 입력하세요 (없으면 Enter): ");
+                    String idInput = scanner.nextLine();
+                    int id_edit = idInput.isEmpty() ? -1 : Integer.parseInt(idInput);
+
+                    System.out.print("제목을 입력하세요 (없으면 Enter): ");
+                    String title_edit = scanner.nextLine();
+                    if (title_edit.isEmpty()) title_edit = null;
+
+                    System.out.print("카테고리를 입력하세요 (없으면 Enter): ");
+                    String category_edit = scanner.nextLine();
+                    if (category_edit.isEmpty()) category_edit = null;
+
+                    System.out.println("수정 전");
+                    System.out.println("id : " + map.get(index_edit).getId());
+                    System.out.println("title : " + map.get(index_edit).getTitle());
+                    System.out.println("category : " + map.get(index_edit).getCategory());
+
+                    VideoEditor editor = new VideoEditor.VideoEditorBuilder()
+                            .id(id_edit)
+                            .title(title_edit)
+                            .category(category_edit)
+                            .build();
+
+                    videoToEdit.edit(editor);
+
+                    System.out.println("=====================================================");
+                    System.out.println("수정 후");
+                    System.out.println("id : " + map.get(index_edit).getId());
+                    System.out.println("title : " + map.get(index_edit).getTitle());
+                    System.out.println("category : " + map.get(index_edit).getCategory());
+                    break;
+                case 5:
+                    System.out.print("빌리고 싶은 비디오의 위치 : ");
+                    int index_lend = scanner.nextInt();
+                    scanner.nextLine();
+                    if (!map.containsKey(index_lend)) {
+                        System.out.println("그 위치에는 비디오가 없습니다.");
+                        break;
+                    }
+                    if (map.get(index_lend).isLend()) {
+                        System.out.println("다른 사용자가 빌려 갔습니다.");
+                        System.out.println("빌린 사람 : " + map.get(index_lend).getLendName());
+                        System.out.println("빌린 시각 : " + map.get(index_lend).getLendDate());
+                        break;
+                    }
+                    System.out.print("이름을 입력하세요 : ");
+                    String name_lend = scanner.nextLine();
+                    LocalDateTime localDate = map.get(index_lend).lend(name_lend);
+                    System.out.println("빌린 비디오 : " + map.get(index_lend).getTitle());
+                    System.out.println("빌린 시각 : " + localDate);
+                    break;
+                case 6:
+                    flag = false;
+                    System.out.print("종료합니다.");
+                    break;
+            }
+        }
+        scanner.close();
+    }
+}

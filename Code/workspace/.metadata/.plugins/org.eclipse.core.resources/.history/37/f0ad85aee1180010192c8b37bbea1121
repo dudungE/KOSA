@@ -1,0 +1,5 @@
+package ex07.network.udp;
+
+public class DatagramClient {
+
+}

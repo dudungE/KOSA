@@ -1,0 +1,12 @@
+package ex08.io.object;
+
+public class ObjectOutputStreamEx {
+	public static void main(String[] args) throws Exception {
+		
+		Grade  vo = new Grade();
+		vo.setSubject("미술");
+		vo.setScore(80);
+		
+		System.out.println(vo);
+	}
+}

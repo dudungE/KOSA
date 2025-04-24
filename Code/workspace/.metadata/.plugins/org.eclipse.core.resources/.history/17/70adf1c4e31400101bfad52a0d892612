@@ -1,0 +1,88 @@
+package quiz_bmi;
+
+public class Person {
+	private String name;
+	private boolean gender;
+	private int height;
+	private int weight;
+	private double bmi;
+	private String health = "";
+	
+	Person(String name, boolean gender, int height, int weight){
+		this.name = name;
+		this.gender = gender;
+		this.height = height;
+		this.weight = weight;
+		this.bmi = getBmi(gender, height, weight);
+		setHealth();
+	}
+	
+	public void setHealth() {
+		String health;
+		
+		if(getBmi() < 18.5) health = "저체중";
+		else if(getBmi() <= 22.9) health = "정상체중";
+		else if(getBmi() <= 24.9) health = "과체중";
+		else health = "비만";
+		
+		this.health = health;
+	}
+	
+	public String getHealth() {
+		return this.health;
+	}
+	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public boolean isGender() {
+		return gender;
+	}
+
+	public void setGender(boolean gender) {
+		this.gender = gender;
+	}
+
+	public int getHeight() {
+		return height;
+	}
+
+	public void setHeight(int height) {
+		this.height = height;
+	}
+
+	public int getWeight() {
+		return weight;
+	}
+
+	public void setWeight(int weight) {
+		this.weight = weight;
+	}
+
+	public double getBmi(boolean gender, int height, int weight) {
+		return weight / ((height / 100.0) * (height / 100.0));
+	}
+	
+	public double getBmi() {
+		return this.bmi;
+	}
+
+	public void setBmi(double bmi) {
+		this.bmi = bmi;
+	}
+	
+	@Override
+	public String toString() {
+		String gender;
+		if(isGender()) gender = "남자";
+		else gender = "여자";
+
+		return String.format("이름 : %1s   성별 : %1s   키 : %1d   몸무게 : %1d   BMI : %1.1f   건강 : %1s", 
+				getName(), gender, getHeight(), getWeight(), getBmi(), getHealth());
+	}	
+}

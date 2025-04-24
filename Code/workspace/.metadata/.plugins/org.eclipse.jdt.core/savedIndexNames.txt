@@ -1,0 +1,15 @@
+INDEX VERSION 1.134+C:\MSA_th2\1_Java\workspace\.metadata\.plugins\org.eclipse.jdt.core
+3072975102.index
+544666264.index
+1865797976.index
+2405643864.index
+3244769962.index
+3939766540.index
+636245144.index
+2537059845.index
+2808722398.index
+477187672.index
+2450575100.index
+4190442604.index
+4135649492.index
+3543304850.index

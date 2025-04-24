@@ -1,0 +1,11 @@
+package ex01.thread;
+
+public class MainEntry {
+	public static void main(String[] args) {
+//		Thread t1 = new Thread("t1");
+		UserThread t1 = new UserThread("t1");
+		
+		t1.start();
+		System.out.println(t1);
+	}
+}

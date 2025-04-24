@@ -1,0 +1,66 @@
+package quiz;
+
+import java.util.Scanner;
+
+public class ScoreLoop {
+	
+	public static void main(String[] args) {
+		
+		String name;
+		int kor, eng, com, total;
+		double avg;
+
+		Scanner sc = new Scanner(System.in);
+
+		while (true) { // 무한루프
+
+			System.out.println("이름을 입력해 주세요 : ");
+			name = sc.next();
+
+			do {
+				System.out.println("국어, 영어, 전산 순으로 점수를 입력해주세요 : ");
+				kor = sc.nextInt();
+				eng = sc.nextInt();
+				com = sc.nextInt();
+			} while ((kor < 0 || kor > 101) || (eng < 0 || eng > 101) || (com < 0 || com > 101));
+
+			total = kor + eng + com;
+			avg = (double) total / 3;
+
+			char grade = ' ';
+			// switch 예시로 변경
+			switch ((int) avg / 10) { // 실수형 올 수 없다
+				case 10:
+				case 9:	grade = 'A';	break;
+				case 8:	grade = 'B';	break;
+				case 7:	grade = 'C';	break;
+				case 6:	grade = 'D';	break;
+				default:	grade = 'F';	break;
+			}
+			
+//			grade =  switch ((int)avg / 10) {  // ex) grade = 'A';
+//				case 10, 9 -> 'A'; 
+//				case  8 -> 'B'; 
+//				case  7-> 'C';
+//				case  6 -> 'D'; 
+//				default -> 'F'; 
+//	        };
+
+			System.out.print(name + "님의 성적표***************\n" 
+								+ "국어 : " + kor + ", 영어 : " + eng + ", 전산 : " + com	+ "\n총점 : " + total);
+			System.out.printf(" , 평균 : %.2f , 평점(학점) : %c\n", avg, grade);
+			
+			System.out.println("\n더 입력 하시겠어요?(y/n) ");
+			// char ans = sc.next().charAt(0);
+
+			String ans = sc.next();
+			// if( ans.toLowerCase().equals("n") || ans.toUpperCase().equals("N") ) break;
+			if (ans.equalsIgnoreCase("n"))
+				break; // equalsIgnoreCase() 대소문자 구분 없이 비교하는 함수
+
+			// if( ans == 'n' || ans == 'N' ) break;
+
+//		      sc.close();
+		} // while end
+	}
+}

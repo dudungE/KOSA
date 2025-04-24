@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;quiz.ScoreFunc&apos; to &apos;ScoreFuncArray&apos;&#x0D;&#x0A;- Original project: &apos;day07_method&apos;&#x0D;&#x0A;- Original element: &apos;quiz.ScoreFunc&apos;&#x0D;&#x0A;- Renamed element: &apos;quiz.ScoreFuncArray&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ScoreFunc&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;quiz{ScoreFunc.java[ScoreFunc" matchStrategy="1" name="ScoreFuncArray" qualified="false" references="true" similarDeclarations="false" stamp="1743065273283" textual="false" version="1.0"/>
+</session>

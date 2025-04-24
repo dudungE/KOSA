@@ -1,0 +1,33 @@
+package ex02.jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class GiftSelect {
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+		
+		Class.forName("oracle.jdbc.OracleDriver");
+		Connection conn = DriverManager.getConnection(
+				"jdbc:oracle:thin:@192.168.230.178:1521:xe", 
+				"kingsmile", "oracle");
+		
+		//3. 사용 (DML 명령어 - Select ) 
+		Statement  stmt = conn.createStatement();
+		ResultSet  rs = stmt.executeQuery("select * from gift");
+		
+		
+		
+		//4. 닫기 (자원 반환)
+	}
+}
+
+
+
+
+
+
+
+

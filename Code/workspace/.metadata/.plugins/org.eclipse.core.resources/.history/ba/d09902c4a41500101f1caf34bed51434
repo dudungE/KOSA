@@ -1,0 +1,19 @@
+//*
+package ex06.innerClass;
+
+import java.awt.Button;
+import java.awt.Frame;
+
+public class InnerEventMain {  // Outer class
+	
+	public static void main(String[] args) {
+		Frame frame = new Frame("이벤트 처리 - 이너클래스");  // 프레임(화면)
+		Button  btn = new Button("Button-Start");
+		
+		frame.add(btn);  // 프레임(윈도우)에 버튼 컴포넌트를 추가
+		frame.setVisible(true);
+		frame.setSize(300, 200);
+		frame.setLocation(300	, 150);
+	}
+}
+//*/

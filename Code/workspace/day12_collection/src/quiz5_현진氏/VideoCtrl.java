@@ -1,0 +1,65 @@
+package quiz5_현진氏;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class VideoCtrl {
+	String title, category, lendName = null, yn = "n";
+	String lendDate = null;
+	boolean lend = false;
+	Integer no = 4;
+	Video v = new Video();
+	
+	public void add(Scanner sc, HashMap vl) {
+		System.out.print("비디오 제목을 입력해주세요. ");
+		title = sc.next();
+		v.setTitle(title);
+		System.out.print("비디오 장르를 입력해주세요. ");
+		category = sc.next();
+		v.setCategory(category);
+		
+		if(!vl.containsKey(no)) {
+			vl.put(no, new Video(no, title, category, lendName, lendDate, lend));
+			no++;
+		}
+	}
+	
+	public int delete(Scanner sc) {
+		int no = sc.nextInt();
+		
+		return no;
+	}
+	
+	public void print(HashMap<Integer, Video> videoList) {
+		// no, title, categroy, lend, lendName, lendDate
+		System.out.printf("%-4s %-15s %-10s %-10s %-12s %-5s\n", 
+		        "No", "Title", "Category", "LendName", "LendDate", "Lend");
+		System.out.println("-------------------------------------------------------------");
+		
+		for(Video video : videoList.values()) {
+			System.out.println(video);
+		}
+	}
+	
+	public void update(Scanner sc, HashMap vl) {
+		Date today = new Date();
+		SimpleDateFormat date = null;
+		
+		System.out.print("비디오를 대여하겠습니까?(y/n) ");
+		yn = sc.next();
+		if(yn.equals("y")) {
+			lend = true;
+			System.out.println("비디오 번호를 입력해주세요: ");
+			no = sc.nextInt();
+			System.out.print("고객명을 입력해주세요. ");
+			lendName = sc.next();
+			v.setLendName(lendName);			
+			date = new SimpleDateFormat("yy-MM-dd");
+			
+		}
+		
+		vl.put(no, new Video(no, title, category, lendName, date.format(today), lend));
+	}
+}

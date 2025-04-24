@@ -1,0 +1,15 @@
+package ex03.network;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+public class URLEx2 {
+	public static void main(String[] args) 
+						throws MalformedURLException  {  //
+		
+		URL url = new URL("https://www.sw.or.kr/site/sw/main.do");  //
+		
+		
+		
+	}
+}

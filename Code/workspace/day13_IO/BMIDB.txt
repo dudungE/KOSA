@@ -1,0 +1,2 @@
+BMI{name='kk', weight=34, height=150, sex=2, BMI=15.11111111111111, grade=LOW}
+BMI{name='tt', weight=88, height=190, sex=1, BMI=24.37673130193906, grade=OVERWEIGHT}

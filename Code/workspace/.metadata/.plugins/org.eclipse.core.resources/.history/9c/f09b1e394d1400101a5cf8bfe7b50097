@@ -1,0 +1,43 @@
+package quiz_video;
+
+import java.util.Scanner;
+
+public class MainEntry {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		VideoManager manager = new VideoManager();
+		
+		while (true) {
+			System.out.println("=============비디오 관리 프로그램============");
+			System.out.println("1.추가 / 2.삭제 / 3.상태변경 / 4.출력 / 5.종료");
+
+			switch (sc.nextLine()) {
+			case "1": //추가
+				manager.addVideo();
+				break;
+				
+			case "2": //삭제
+				manager.deleteVideo();
+				break;
+				
+			case "3": //수정
+				manager.updateVedio();
+				break;
+				
+			case "4": //출력
+				manager.print();
+				break;
+				
+			case "5": //종료
+				System.out.println("프로그램을 종료합니다.");
+				System.exit(0);
+				break;
+				
+			default:
+				System.out.println("숫자로만 입력해주세요.");
+				break;
+			}
+		}
+		
+	}
+}

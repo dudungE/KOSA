@@ -1,0 +1,21 @@
+package ex05.syncronized;
+
+class Atm {
+	
+} // end Atm 
+
+class UserAtm  extends Thread {
+
+	@Override
+	public void run() {  // 스레드 실행부(구현부)
+		// TODO Auto-generated method stub
+		super.run();
+	}
+		
+} // end UserAtm
+
+public class MainEntry {
+	public static void main(String[] args) {
+		
+	}
+}

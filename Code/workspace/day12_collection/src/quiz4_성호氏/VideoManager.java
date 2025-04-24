@@ -1,0 +1,82 @@
+package quiz4_성호氏;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.Set;
+
+public class VideoManager {
+	private int videosCount = 1;
+	private HashMap<Integer, Video> videos = new HashMap<Integer, Video>(); 
+	
+	Scanner sc = new Scanner(System.in);
+	
+	public void addVideo() {
+		System.out.println("제목을 입력하세요");
+		String title = sc.next();
+		
+		System.out.println("카테고리를 입력하세요");
+		String category = sc.next();
+		
+		System.out.println("대여자를 입력하세요");
+		String lendName = sc.next();
+		Video newVideo = new Video(title, category, lendName);
+		videos.put(videosCount++, newVideo);
+		System.out.println(newVideo.getTitle() + " 비디오의 생성 및 대여가 완료되었습니다.");
+	}
+	
+	public void delete() {
+		System.out.println("삭제할 비디오 번호를 입력하세요");
+		int no = sc.nextInt();
+		
+		String deleteVideoTitle = videos.get(no).getTitle();
+		videos.remove(no);
+		
+		System.out.println("비디오 제목 " + deleteVideoTitle + "가 삭제되었습니다.");
+	}
+	
+	public void printVideos() {
+		Collection<Video> v = videos.values();
+		for(Video video : videos.values()) {
+			System.out.println("==================================");
+			System.out.println(video);
+			System.out.println("==================================");
+		}
+	}
+	
+	public void editVideo() {
+		System.out.println("변경할 비디오 번호를 입력하세요");
+		int no = sc.nextInt();
+		
+		if(videos.get(no) == null) {
+			System.out.println("해당 번호의 비디오는 없습니다. 다시 시도해주세요");
+			return;
+		}
+		
+		Video v = videos.get(no);
+		
+		System.out.print("변경할 항목을 입력하세요 \n 제목 : 1\n카테고리 : 2");
+		int choiceNumber = sc.nextInt();
+		switch (choiceNumber) {
+		case 1:
+			System.out.println("변경할 제목을 입력하세요");
+			String name = sc.next();
+			v.setTitle(name);
+			System.out.println("변경되었습니다. 정보를 확인하세요");
+			System.out.println(v);
+			break;
+			
+		case 2:
+			System.out.println("변경할 카테고리를 입력하세요");
+			String category = sc.next();
+			v.setCategory(category);
+			System.out.println("변경되었습니다. 정보를 확인하세요");
+			System.out.println(v);
+		default:
+			break;
+		}
+	}
+	
+}

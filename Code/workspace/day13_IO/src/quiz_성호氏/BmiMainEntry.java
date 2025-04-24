@@ -1,0 +1,70 @@
+package quiz_성호氏;
+
+import java.io.IOException;
+import java.util.Scanner;
+
+public class BmiMainEntry {
+
+	public static void main(String[] args) throws IOException, ClassNotFoundException {
+		BmiManager bm = new BmiManager();
+		Scanner sc = new Scanner(System.in);
+		boolean flag = true;
+		
+		while (flag) {
+			menu();
+			int selectNumber = sc.nextInt();
+			
+			switch (selectNumber) {
+				case 1:
+					bm.addHuman();
+					break;
+					
+				case 2:
+					bm.deleteHuman();
+					break;
+					
+				case 3:
+					bm.printHumans();
+					break;
+					
+				case 4:
+					bm.editHuman();
+					break;
+					
+				case 5:
+					bm.saveFile();
+					break;
+					
+				case 6:
+					bm.loadFile();
+					break;
+					
+				case 7:
+					System.out.println("프로그램을 종료합니다.");
+					flag = false;
+					System.exit(0);
+					break;
+	
+				default:
+					System.out.println("올바른 숫자를 입력해주세요");
+					break;
+			}
+		}
+		
+		System.out.println();
+
+	}
+	
+	public static void menu() {
+		System.out.println("안녕하세요 비디오 관리 시스템입니다.");
+		System.out.println("메뉴를 선택해주세요");
+		System.out.println("1.  추가");
+		System.out.println("2. 삭제");
+		System.out.println("3. 사람들 정보 출력");
+		System.out.println("4. 특정 레코드 정보 수정");
+		System.out.println("5. 사람 정보 파일 저장");
+		System.out.println("6. 사람 정보 파일 로드");
+		System.out.println("7. 프로그램 종료");
+	}
+
+}
