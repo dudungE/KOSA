@@ -16,13 +16,21 @@ public class Main {
             int opt = sc.nextInt();
             switch (opt) {
                 case 1 -> {
-                    System.out.println("title, cat");
+                    sc.nextLine(); // 개행 버퍼 제거
+                    System.out.println("title");
                     String title = sc.nextLine();
+                    System.out.println("category");
                     String cat = sc.nextLine();
                     vm.Create(title, cat);}
                 case 2 -> {vm.Read();}
                 case 3 -> {vm.Update();}
                 case 4 -> {vm.Delete();}
+                case 5 -> {vm.lend();}
+                case 0 -> {
+                    System.out.println("시스템 종료합니다.");
+                    System.exit(0);
+                }
+
 
             }
         }

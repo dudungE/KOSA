@@ -13,14 +13,15 @@
      Video 추가 / 삭제 / Video 리스트 출력 / 수정 / 프로그램 종료  출력하는 프로그램 작성하기.
  */
 
-import java.util.Date;
+import java.time.LocalDateTime;
+
 
 public class Video {
     private int id;
     private static int count;
     private String title, category, lendName;
     private boolean lend;
-    Date lendDate;
+    LocalDateTime lendDate;
 
     public Video (String title, String category) {
         this.id = count++;
@@ -80,11 +81,11 @@ public class Video {
         this.lend = lend;
     }
 
-    public Date getLendDate() {
+    public LocalDateTime getLendDate() {
         return lendDate;
     }
 
-    public void setLendDate(Date lendDate) {
+    public void setLendDate(LocalDateTime lendDate) {
         this.lendDate = lendDate;
     }
 

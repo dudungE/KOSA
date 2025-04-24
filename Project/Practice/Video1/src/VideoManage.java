@@ -1,3 +1,4 @@
+import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -5,7 +6,8 @@ public class VideoManage {
 
     HashMap<Integer, Video> hm = new HashMap<>();
     Scanner sc = new Scanner(System.in);
-//    Video v = new Video();
+    Video v;
+
 
     public  void init() {
         Video v = new Video("gg", "bb");
@@ -18,12 +20,11 @@ public class VideoManage {
     }
     // 메서드 이름 camelcase로
     public void Create(String title, String cat) {
-        Video video = new Video(title, cat);
-        hm.put(video.getId(), video);
-
-
+        v = new Video(title, cat);
+        hm.put(v.getId(), v);
 
     }
+
     public void Read() {
         if (hm.size() == 0) {
             System.out.println("내용 없습니다");
@@ -31,8 +32,8 @@ public class VideoManage {
             }
         System.out.println(hm);
 
-
     }
+
     public void Update() {
         System.out.println("삭제할 id 입력");
         int idx = sc.nextInt();
@@ -47,8 +48,26 @@ public class VideoManage {
     public void Delete() {
         System.out.println("삭제할 id 입력");
         int idx = sc.nextInt();
-        Video v; // 참조변수만 선언
+//        Video v; // 참조변수만 선언
         v = hm.remove(idx); //
+    }
+
+    public void lend() {
+
+        try {
+            LocalDateTime now = LocalDateTime.now();
+            System.out.println("빌릴 비디오 id입력");
+            // nullpointexception 처리하기
+            v = hm.get(sc.nextInt());
+            System.out.println(v);
+            System.out.println("이름입력: ");
+            v.setLendName(sc.next());
+            v.setLendDate(now);
+            v.setLend(true);
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("없는 id입니다 ");
+        }
 
     }
 
